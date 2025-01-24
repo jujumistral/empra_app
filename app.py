@@ -13,10 +13,10 @@ import pandas as pd
 import plotly.graph_objects as go
 
 # Beispiel-Daten
-diff_data_midi = pd.read_csv("/Users/jsenf/Desktop/empra_app/diff_data_midi.csv")
-midi_data_df = pd.read_csv("/Users/jsenf/Desktop/empra_app/midi_data_df.csv")
-rt_data_df = pd.read_csv("/Users/jsenf/Desktop/empra_app/rt_data_df.csv")
-means_df = pd.read_csv("/Users/jsenf/Desktop/empra_app/mean_rt_by_sound.csv")
+diff_data_midi = pd.read_csv("diff_data_midi.csv")
+midi_data_df = pd.read_csv("midi_data_df.csv")
+rt_data_df = pd.read_csv("rt_data_df.csv")
+means_df = pd.read_csv("mean_rt_by_sound.csv")
 
 conditions = [
     "faces_left_faces_right",
