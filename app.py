@@ -34,6 +34,7 @@ linestyles = {"normal": "dash", "aesth": "dot"}
 
 # App erstellen
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
+server = app.server
 
 app.layout = dbc.Container([
     dbc.Row([
