@@ -321,7 +321,7 @@ def update_graphs(selected_condition, selected_sound_condition, show_histogram, 
             if mean_value.size > 0:
                 fig_midi.add_trace(go.Scatter(
                     x=[mean_value[0], mean_value[0]],
-                    y=[0, max(midi_data_df[line_1].max(), midi_data_df[line_2].max())],
+                    y=[min(midi_data_df[line_1].min(), midi_data_df[line_2].min()), max(midi_data_df[line_1].max(), midi_data_df[line_2].max())],
                     mode="lines",
                     name=f"{sound_type} mean",
                     line=dict(color=color, dash=linestyles[sound_type], width=2)
