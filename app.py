@@ -174,8 +174,36 @@ app.layout = dbc.Container([
         dbc.Col(html.Img(src="/assets/interaction_in_interval_ratio.png", style={"width": "100%"}), width=6),
         dbc.Col(html.Img(src="/assets/interaction_abs_diff.png", style={"width": "100%"}), width=6)
     ]),
-    
-], fluid=False)
+
+# Hinweiskasten e (PDF Anzeige und Download)
+    dbc.Row([
+        dbc.Col(
+            dbc.Alert(
+                "Hier können Sie unser Poster als PDF-Datei einsehen und herunterladen.",
+                color="info"
+            ), width=12
+        )
+    ]),
+    dbc.Row([
+        # PDF-Anzeige
+        dbc.Col(
+            html.Iframe(
+                src="/assets/empra_poster.pdf",  # Link zur PDF
+                style={"width": "100%", "height": "600px", "border": "none"}
+            ), width=12
+        )
+    ]),
+    dbc.Row([
+    # Download-Link
+        dbc.Col(
+            html.A(
+                "PDF herunterladen",
+                href="/assets/empra_poster.pdf",  # Direktlink zur Datei
+                download="empra_poster.pdf",  # Dateiname für den Download
+                className="btn btn-primary mt-3"  # Bootstrap-Button
+            ), width=12
+        )
+    ])], fluid=False)
 
 # Callbacks für Graphen
 @app.callback(
